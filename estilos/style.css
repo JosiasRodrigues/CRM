@@ -44,6 +44,8 @@ button {
   cursor: pointer;
 }
 
+
+
 .control {
   border: 0;
   outline: none;
@@ -133,11 +135,12 @@ margin-top: -40px;
 
 .toggle {
   position: absolute;
-  top: 600px;
+  top: 560px;
   right: 564px;
   translate: 0 -50%;
   width: 30px;
   height: 30px;
+  display: block;
   background-image: url("/img/show.svg");
   background-size: 85%;
   background-position: center;
