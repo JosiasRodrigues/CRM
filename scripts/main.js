@@ -23,6 +23,8 @@
     setCaret(input);
   };*/
 
+ 
+
 
 // Função para exibir uma mensagem de aviso
 function showErrorMessage(message) {
@@ -45,6 +47,10 @@ document.querySelector('.control[type="button"]').addEventListener('click', func
 
   if (!textInput.value || !passwordInput.value) {
     showErrorMessage('Por favor, preencha todos os campos.');
+  } else {
+    // Se ambos os campos estiverem preenchidos, oculte a tela do cartão e mostre a modal
+    document.getElementById('cardDiv').style.display = 'none';
+    document.getElementById('telInicial').style.display = 'block';
   }
 });
 
@@ -58,6 +64,20 @@ const togglePassword = (button) => {
   input.focus();
 
 };
+
+
+  // Adicione um ouvinte de eventos para o botão "Sair" na modal
+  document.querySelector(".m-header .btn-white").addEventListener("click", function () {
+      // Ao clicar em "Sair", mostre a tela do cartão e oculte a modal
+      document.getElementById('telInicial').style.display = 'none';
+      document.getElementById('cardDiv').style.display = 'block';
+  });
+
+
+
+
+
+
 
 
 
