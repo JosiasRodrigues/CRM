@@ -51,8 +51,9 @@ document.getElementById('form-login').addEventListener('submit', function (event
     showErrorMessage('Por favor, preencha todos os campos.');
   } else {
     // Se ambos os campos estiverem preenchidos, oculte a tela do cartão e mostre a modal
-    document.getElementById('cardDiv').style.display = 'none';
-    document.getElementById('telInicial').style.display = 'block';
+    document.getElementById('goToSignupBtn').addEventListener('click', function(){
+      window.location.href = 'signin.html'
+    })
   }
 });
 
