@@ -10,6 +10,8 @@ function showErrorMessage(message) {
   
   };
 
+  
+
   document.getElementById('form-login').addEventListener('submit', function (event) {
     event.preventDefault()
     console.log(event)
@@ -20,20 +22,20 @@ function showErrorMessage(message) {
       showErrorMessage('Por favor, preencha todos os campos.');
     } else {
       // Se ambos os campos estiverem preenchidos, oculte a tela de cadastro e mostre a de login
-      document.getElementById('cadastro').style.display = 'none';
-      document.getElementById('cardDiv').style.display = 'block';
+      document.getElementById('cadastrarBtn').addEventListener('click', function() {
+        window.location.href = 'index.html'
+      })
     }
   });
 
 
   const togglePassword = (button) => {
 
-    button.target.classList.toggle("showing");
-    const input = document.getElementById("password");
-    input.type = input.type === "password" ? "text" : "password";
-    
+  button.target.classList.toggle("showing");
+  const input = document.getElementById("password");
+  input.type = input.type === "password" ? "text" : "password";
   
-  };
-  
-  document.getElementById('view-password').addEventListener('click', togglePassword)
-  
+
+};
+
+document.getElementById('view-password').addEventListener('click', togglePassword)
