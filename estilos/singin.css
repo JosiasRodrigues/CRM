@@ -1,0 +1,174 @@
+:root {
+    --primary-color: #3841E6;
+    --text: #EDF0F7;
+    --sidebar-gray: #111926;
+    --sidebar-gray-light: #F8F7FD;
+    --sidebar-gray-background: #6067EB;
+    --success: #00C896;
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+.wrapper {
+    height: 100%;
+}
+
+@keyframes rotate {
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    display: grid;
+    place-items: center;
+    margin: 0;
+    background: #8cc4e0;
+    font-family: "Euclid Circular A", "Poppins";
+    color: #000000;
+    animation: rotate 1s infinite alternate linear;
+    overflow-y: hidden;
+}
+
+button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+
+
+.control-cad {
+    border: 0;
+    outline: none;
+    width: 500px;
+    height: 56px;
+    padding: 0 35px;
+    border-radius: 6px;
+    color: #5a4f79;
+    margin-left: 17px;
+    font-family: inherit;
+    font-size: 18px;
+    transition: 0.4s;
+}
+
+.control-cad:focus {
+    border-color: rgb(0 0 0 / 30%);
+}
+
+.card {
+    width: 600px;
+    height: 615px;
+    padding: 60px 30px 38px;
+    border-radius: 1.25rem;
+    background: #e23f3f;
+    text-align: center;
+}
+
+.card>img {
+    width: 250px;
+    border-radius: 50%;
+    padding-bottom: 20px;
+    margin-top: -40px;
+}
+
+.card>h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin: 0 0 30px;
+}
+
+.form {
+    width: 100%;
+    margin: 0;
+    display: grid;
+    gap: 16px;
+}
+
+.form input.control::placeholder {
+    color: #aaa7bc;
+}
+
+.form>button.control-cad {
+    cursor: pointer;
+    width: 500px;
+    height: 56px;
+    padding: 0 16px;
+    background: #1c98dd;
+    color: #f9f9f9;
+    border: 0;
+    border-radius: 6px;
+    margin-left: 17px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.375s;
+}
+
+.password-cad {
+    border: 0;
+    outline: none;
+    width: 500px;
+    height: 56px;
+    padding: 0 16px;
+    border-radius: 6px;
+    color: #5a4f79;
+    margin-left: 17px;
+    font-family: inherit;
+    font-size: 18px;
+    transition: 0.4s;
+}
+
+.password {
+    display: flex;
+    border: 0;
+    outline: none;
+    align-items: center;
+    width: 500px;
+    height: 56px;
+    padding: 0 5px;
+    border-radius: 6px;
+    margin-left: 17px;
+    background: #f4f5f7;
+    color: #5a4f79;
+    font-family: inherit;
+    font-size: 18px;
+    transition: 0.4s;
+
+}
+
+.show-password {
+    display: flex;
+}
+
+.toggle {
+
+    width: 30px;
+    height: 30px;
+    display: block;
+    margin-right: 10px;
+    background-image: url("/img/show.svg");
+    background-size: 85%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.toggle.showing {
+    background-image: url("/img/hide.svg");
+}
+
+.error-message {
+    font-size: 16px;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
+}

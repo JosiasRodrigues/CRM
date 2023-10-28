@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <title>LOGIN CRM</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
    <!-- <link rel="stylesheet" href="./estilos/bootstrap.min.css">-->
     <link rel="stylesheet" href="./estilos/style.css" />
@@ -18,36 +18,22 @@
     <div class="card" id="cardDiv">
         <img src="./img/8400_5_2_04.jpg" />
         <h2>Josias Projeto Plataforma</h2>
-        <form class="form">
+        <form class="form" id="form-login">
 
-            <input spellcheck="false" class="control" type="text" placeholder="Login" autocomplete="nickname" />
+            <input spellcheck="false" class="control" type="text" placeholder="Login" autocomplete="nickname"  id="login"/>
             <div class="password">
                 <input spellcheck="false" class="control" id="password" type="password" placeholder="Senha"
                     autocomplete="off"  maxlength="10"/>
-                <button class="toggle" type="button" onclick="togglePassword(this)"></button>
+                <button class="toggle" type="button" id="view-password"></button>
             </div>
-            <button class="control" type="button">Sign Up</button>
+            <button class="control" type="submit">Sign Up</button>
+        </form>
+        <form class="cadastro">
+            <button class="cad-control">cadastre-se</button>
         </form>
     </div>
 
-   <div class="modal-full" id="telInicial">
-
-    <div class="m-header">
-        <div class="container">
-            <a class="btn-white btn-sm float-right" onclick="">
-                Sair
-            </a>
-    </div>
-
-        <div class="m-body">
-
-        </div>
-
-        <div class="m-footer">
-
-        </div>
-
-    </div>
+   
 
 
 
@@ -59,3 +45,5 @@
 </body>
 
 </html>
+
+

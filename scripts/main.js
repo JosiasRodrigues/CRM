@@ -28,22 +28,24 @@
 
 // Função para exibir uma mensagem de aviso
 function showErrorMessage(message) {
+  if(document.getElementById('erro-message')) return;
   const errorMessage = document.createElement('div');
-  errorMessage.className = 'error-message';
+  errorMessage.className = 'error-message'; 
+  errorMessage.id = 'erro-message'
   errorMessage.textContent = message;
 
   const form = document.querySelector('.form');
   form.appendChild(errorMessage);
 
-  setTimeout(() => {
-    errorMessage.remove();
-  }, 3000);
+ 
 }
 
 // Função para verificar e lidar com o clique no botão "Sign Up"
-document.querySelector('.control[type="button"]').addEventListener('click', function () {
-  const textInput = document.querySelector('input[type="text"]');
-  const passwordInput = document.querySelector('input[type="password"]');
+document.getElementById('form-login').addEventListener('submit', function (event) {
+  event.preventDefault()
+  console.log(event)
+  const textInput = document.getElementById('login');
+  const passwordInput = document.getElementById('password');
 
   if (!textInput.value || !passwordInput.value) {
     showErrorMessage('Por favor, preencha todos os campos.');
@@ -58,20 +60,16 @@ document.querySelector('.control[type="button"]').addEventListener('click', func
 
 const togglePassword = (button) => {
 
-  button.classList.toggle("showing");
+  button.target.classList.toggle("showing");
   const input = document.getElementById("password");
   input.type = input.type === "password" ? "text" : "password";
-  input.focus();
+  
 
 };
 
+document.getElementById('view-password').addEventListener('click', togglePassword)
 
-  // Adicione um ouvinte de eventos para o botão "Sair" na modal
-  document.querySelector(".m-header .btn-white").addEventListener("click", function () {
-      // Ao clicar em "Sair", mostre a tela do cartão e oculte a modal
-      document.getElementById('telInicial').style.display = 'none';
-      document.getElementById('cardDiv').style.display = 'block';
-  });
+ 
 
 
 
