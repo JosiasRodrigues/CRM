@@ -10,7 +10,18 @@ function showErrorMessage(message) {
   
   };
 
+
+
+  document.getElementById('cadastrarBtn').addEventListener('click', function() { 
+    const textInput = document.getElementById('login');
+    const passwordInput = document.getElementById('password');
   
+    if (!textInput.value || !passwordInput.value) {
+      showErrorMessage('Por favor, preencha todos os campos.');
+      return;
+    }
+     window.location.href = 'index.html'
+  })
 
   document.getElementById('form-login').addEventListener('submit', function (event) {
     event.preventDefault()
@@ -22,9 +33,7 @@ function showErrorMessage(message) {
       showErrorMessage('Por favor, preencha todos os campos.');
     } else {
       // Se ambos os campos estiverem preenchidos, oculte a tela de cadastro e mostre a de login
-      document.getElementById('cadastrarBtn').addEventListener('click', function() {
-        window.location.href = 'index.html'
-      })
+      
     }
   });
 
